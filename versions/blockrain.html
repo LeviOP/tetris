@@ -6,11 +6,14 @@
   <script type="text/javascript" src="blockrain.jquery.js"></script>
   <script>
     var $game = $('.game').blockrain({autoplay: false, autoplayRestart: false});
-    $('.game').blockrain();
+    $("#themes input[name='theme']").click(function(){ 
+      $game.blockrain('theme', $(this).val());
+    });
+
   </script>
   <title>Blockrain</title>
 </head>
 <body style="margin: unset;">
-  <div class="game" style="width: 100%; height: 100%;"></div>
+  <div class="game" style="width: 100%; height: 50vh%;"></div>
 </body>
 </html>
